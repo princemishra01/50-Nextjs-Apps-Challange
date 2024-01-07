@@ -47,8 +47,8 @@ export default function Home() {
     console.log(length, numbers, specialChar);
   }
   
-  async function toggleNum () {
-      await setNumbers(numbers => !numbers);
+  function toggleNum () {
+      setNumbers(numbers => !numbers);
       console.log(numbers);
       generatePassword();
   }
@@ -98,5 +98,3 @@ export default function Home() {
     </main>
   )
 }
-
-
