@@ -22,7 +22,8 @@ export default function Home() {
   const csss = useRef(null);
 
   const copyToClipBoard = () => {
-    navigator.clipboard.writeText(csss.current.innerText);
+    csss.current.select();
+    navigator.clipboard.writeText(csss.current.value);
   }
 
   return (
@@ -38,8 +39,8 @@ export default function Home() {
         <input type='color' id='color1' onChange={(e) => setColor1(e.target.value)} className='h-10 w-10' />
         <input type='color' id='color2' onChange={(e) => setColor2(e.target.value)} className='h-10 w-10' />
       </div>
-      <div className='flex p-2 bg-gray-400 rounded-lg'>
-        <div ref={csss} className='text-2xl p-2 pr-4'>{`background-image: linear-gradient(${mymap[angle]} , ${color1} , ${color2}});`}</div>
+      <div className='flex p-2 bg-gray-300 rounded-lg '> 
+        <input type='text' ref={csss} className='text-2xl p-2 mr-2 w-[770px] rounded-md bg-slate-200 focus:outline-none' value={`background-image: linear-gradient(${mymap[angle]} , ${color1} , ${color2}});`}/>
         <Image src={copyIcon} onClick={copyToClipBoard} className='h-10 w-10 my-1' alt="gradient" />
       </div>
     </main>
