@@ -1,4 +1,4 @@
-// mongodb
+
 
 export const verifyJwt = async(token) => {
     // verify jwt token

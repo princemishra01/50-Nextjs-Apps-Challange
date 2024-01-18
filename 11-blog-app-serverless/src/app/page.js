@@ -9,9 +9,11 @@ export default function Home() {
   // Next JS, Tailwind , Serverless -> REST API ON nextjs 
   // Redux , ShadCn
 
+  
+
   return (
     <div>
-      <h1></h1>
+      <h1>something</h1>
     </div>
   )
 }
